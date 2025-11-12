@@ -11,8 +11,41 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn link for icon  -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-[…]” crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <header>
+      <!-- navbar section -->
+      <nav class="">
+        <div class="navbar bg-gray-100 shadow-sm">
+          <div class="navbar-start">
+            <p class="text-xl pl-5">
+              English <span><i class="fa-brands fa-windows text-2xl text-[#0078D6]"></i></span>
+              <span>পাঠশালা</span>
+            </p>
+          </div>
+          <div class="navbar-end flex gap-3 pl-5">
+            <button class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white">
+              <span class="text-lg ">?</span>FAQ
+            </button>
+            <button class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white">
+              <span class="text-lg"
+                ><i class="fa-solid fa-book-open-reader"></i></span
+              >Learn
+            </button>
+            <button class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white">
+              <span class="text-lg"
+                ><i class="fa-solid fa-right-from-bracket"></i></span
+              >Logout
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
     <script src="script/connect.js"></script>
   </body>
 </html>
