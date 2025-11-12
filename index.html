@@ -38,6 +38,7 @@
               <span class="text-lg">?</span>FAQ
             </button>
             <button
+              id="learn"
               class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
             >
               <span class="text-lg"
@@ -81,7 +82,7 @@
               />
             </label>
 
-            <!-- Second inupt field  -->
+            <!-- Second input field  -->
             <label class="input validator">
               <input
                 type="text"
@@ -101,14 +102,120 @@
           <img class="" src="assets/hero-student.png" alt="" />
         </div>
       </section>
+
+      <!-- Learn Section -->
+      <section class="w-11/12 mx-auto mt-40">
+        <div class="text-center">
+          <h1 class="text-xl font-bold">
+            <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+          </h1>
+        </div>
+        <div
+          id="lesson-btn"
+          class="text-center pt-8 flex gap-2 justify-center items-center"
+        >
+          <!-- <button class="btn text-[#422AD5] border-[#422AD5]"><i class="fa-solid fa-book-open-reader "></i> Lesson-1</button> -->
+        </div>
+        <div class="mt-12 bg-gray-100 p-16 text-center">
+          <p>আপনি এখনো কোনো Lesson Select করেন নি</p>
+          <h1 class="text-4xl pt-3 rounded-xl">একটি Lesson Select করুন।</h1>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="w-11/12 mx-auto mt-50">
+        <div class="text-center mb-16">
+          <h1 class="text-3xl font-bold">
+            <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+          </h1>
+        </div>
+        <!-- Accordion from daisyui -->
+
+        <!-- question-1 -->
+        <div
+          class="collapse collapse-plus bg-gray-100 border border-base-300 mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            1.The difference between var, let, and const ?
+          </div>
+          <div class="collapse-content text-sm">
+            <span class="font-bold">Answer:</span> Var is function-scoped and
+            can be redeclared or updated, while let and const are block-scoped.
+            let allows reassignment, but const does not.
+          </div>
+        </div>
+
+        <!-- question-2 -->
+        <div
+          class="collapse collapse-plus bg-gray-100 border border-base-300 mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            2. The difference between map(), forEach(), and filter() ?
+          </div>
+          <div class="collapse-content text-sm">
+            <span class="font-bold">Answer:</span> map() and filter() return new
+            arrays, while forEach() doesn’t. map() transforms elements, and
+            filter() selects elements based on a condition.
+          </div>
+        </div>
+        <!-- question-3 -->
+        <div
+          class="collapse collapse-plus bg-gray-100 border border-base-300 mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            2. Explain arrow functions and how they are different from regular
+            functions ?
+          </div>
+          <div class="collapse-content text-sm">
+            <span class="font-bold">Answer:</span> Arrow functions have a
+            shorter syntax and don’t bind their own this, arguments, or super.
+            They’re best for simple callbacks, while regular functions have
+            their own this context.
+          </div>
+        </div>
+        <!-- question-4 -->
+        <div
+          class="collapse collapse-plus bg-gray-100 border border-base-300 mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            2. How JavaScript Promises work ?
+          </div>
+          <div class="collapse-content text-sm">
+            <span class="font-bold">Answer:</span> JavaScript Promises handle
+            asynchronous operations, representing a value that may be available
+            now, later, or never. They have three states pending, fulfilled,
+            and rejected managed using .then(), .catch(), and .finally().
+          </div>
+        </div>
+        <!-- question-5 -->
+        <div
+          class="collapse collapse-plus bg-gray-100 border border-base-300 mb-5 rounded-2xl"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            5. how closures work in JavaScript ?
+          </div>
+          <div class="collapse-content text-sm">
+            <span class="font-bold">Answer:</span> Closures allow a function to
+            access variables from its outer scope, even after that scope has
+            finished executing. They help in data privacy and maintaining state
+            between function calls.
+          </div>
+        </div>
+      </section>
     </header>
+
     <footer class="mt-30 mb-10 border-t-2 border-gray-200">
       <!-- flex div-->
       <div class="w-11/12 mx-auto flex justify-between items-center mt-12">
         <!-- footer left side -->
         <div>
           <p class="text-xl">
-            English 
+            English
             <span
               ><i class="fa-brands fa-windows text-xl text-[#0078D6]"></i
             ></span>
