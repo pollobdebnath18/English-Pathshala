@@ -24,20 +24,29 @@
         <div class="navbar bg-gray-100 shadow-sm">
           <div class="navbar-start">
             <p class="text-xl pl-5">
-              English <span><i class="fa-brands fa-windows text-2xl text-[#0078D6]"></i></span>
+              English
+              <span
+                ><i class="fa-brands fa-windows text-2xl text-[#0078D6]"></i
+              ></span>
               <span>পাঠশালা</span>
             </p>
           </div>
           <div class="navbar-end flex gap-3 pl-5">
-            <button class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white">
-              <span class="text-lg ">?</span>FAQ
+            <button
+              class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+            >
+              <span class="text-lg">?</span>FAQ
             </button>
-            <button class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white">
+            <button
+              class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+            >
               <span class="text-lg"
                 ><i class="fa-solid fa-book-open-reader"></i></span
               >Learn
             </button>
-            <button class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white">
+            <button
+              class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+            >
               <span class="text-lg"
                 ><i class="fa-solid fa-right-from-bracket"></i></span
               >Logout
@@ -45,6 +54,52 @@
           </div>
         </div>
       </nav>
+      <!-- banner section -->
+      <section
+        class="w-11/12 mx-auto flex justify-between gap-60 items-center  mt-16"
+      >
+        <!-- banner left site -->
+        <div>
+          <h1 class="text-3xl font-bold">
+            <span class="text-[#00BCFF]">English</span> is Easy!!
+          </h1>
+          <p class="pt-5 leading-relaxed ">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা 
+            আপনার দক্ষতা  বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে <br>
+            অন্য একটি Level এ
+          </p>
+          <div class="flex flex-col gap-4">
+            <!-- First input field -->
+            <label class="input validator mt-6 mb-1">
+              <input
+                type="text"
+                required
+                placeholder="Enter Username"
+                minlength="3"
+                maxlength="30"
+              />
+            </label>
+
+            <!-- Second inupt field  -->
+            <label class="input validator">
+              <input
+                type="text"
+                required
+                placeholder="Password(12345)"
+                minlength="3"
+                maxlength="30"
+              />
+            </label>
+          </div>
+          <div class="pt-6">
+            <button class="btn text-white bg-[#422AD5]">Get Started</button>
+          </div>
+        </div>
+        <!-- banner right side -->
+        <div>
+          <img class="" src="assets/hero-student.png" alt="">
+        </div>
+      </section>
     </header>
     <script src="script/connect.js"></script>
   </body>
