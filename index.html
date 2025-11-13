@@ -20,9 +20,9 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      .active{
-        color:white;
-        background: #422AD5 ;
+      .active {
+        color: white;
+        background: #422ad5;
       }
     </style>
   </head>
@@ -125,12 +125,10 @@
         ></div>
       </section>
       <!-- button 4 and 7 no card  -->
-      <section id="no-card" class="w-11/12 mx-auto mt-30 mb-20 text-center">
-        <!-- <div class="mt-12 bg-gray-100 p-12 text-center">
-          <p>আপনি এখনো কোনো Lesson Select করেন নি</p>
-          <h1 class="text-4xl pt-3 rounded-xl">একটি Lesson Select করুন।</h1>
-        </div> -->
-      </section>
+      <section
+        id="no-card"
+        class="w-11/12 mx-auto mt-30 mb-20 text-center"
+      ></section>
 
       <!-- Word Meaning Section  -->
       <section
@@ -138,8 +136,7 @@
         class="w-11/12 mx-auto grid grid-cols-3 gap-4 object-cover mt-30 mb-30 bg-gray-200 p-10 rounded-xl"
       ></section>
 
-
-       <!-- FAQ Section -->
+      <!-- FAQ Section -->
       <section class="w-11/12 mx-auto mt-50">
         <div class="text-center mb-16">
           <h1 class="text-3xl font-bold">
@@ -204,8 +201,8 @@
           <div class="collapse-content text-sm">
             <span class="font-bold">Answer:</span> JavaScript Promises handle
             asynchronous operations, representing a value that may be available
-            now, later, or never. They have three states pending, fulfilled,
-            and rejected managed using .then(), .catch(), and .finally().
+            now, later, or never. They have three states pending, fulfilled, and
+            rejected managed using .then(), .catch(), and .finally().
           </div>
         </div>
         <!-- question-5 -->
@@ -225,6 +222,23 @@
         </div>
       </section>
 
+      <!-- Modal for word details -->
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+        <dialog id="wordDetails" class="modal">
+          <div class="modal-box">
+            <div id="details_container"></div>
+
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
     </header>
 
     <footer class="mt-30 mb-10 border-t-2 border-gray-200">
