@@ -57,8 +57,8 @@ function displayWordMeaning(words) {
               <p class="text-lg">meaning / pronunciation</p>
               <p class="text-lg font-bold">${word.meaning} / ${word.pronunciation}</p>
               <div class="flex justify-between items-center py-5">
-                <i class="fa-solid fa-clock text-xl"></i>
-                <i class="fa-solid fa-volume-high text-xl"></i>
+                <button class="btn"><i class="fa-solid fa-clock text-xl"></i></button>
+                <button class="btn"> <i class="fa-solid fa-volume-high text-xl"></i></button>
               </div>
             </div>
           </div>
