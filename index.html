@@ -29,7 +29,7 @@
   <body>
     <header>
       <!-- navbar section -->
-      <nav id="nav" class="hidden">
+      <nav id="nav" class="sticky top-0 bg-white shadow-md z-50 hidden">
         <div class="navbar bg-gray-100 shadow-sm">
           <div class="navbar-start">
             <p class="text-xl pl-5">
@@ -41,14 +41,13 @@
             </p>
           </div>
           <div class="navbar-end flex gap-3 pl-5">
-            <button
-              onclick="showFAQ()"
+            <button onclick="FAQ()" id="faq-btn"
               class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
             >
               <span class="text-lg">?</span>FAQ
             </button>
             <button
-              onclick="showLearn()"
+              onclick="Learn()" id="learn-btn"
               ;
               class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
             >
@@ -67,7 +66,8 @@
         </div>
       </nav>
       <!-- banner section -->
-      <section id="banner"
+      <section
+        id="banner"
         class="w-11/12 mx-auto flex justify-between gap-60 items-center mt-16"
       >
         <!-- banner left site -->
@@ -84,7 +84,8 @@
           <div class="flex flex-col gap-4">
             <!-- First input field -->
             <label class="input validator mt-6 mb-1">
-              <input id="input1"
+              <input
+                id="input1"
                 type="text"
                 required
                 placeholder="Enter Your Name"
@@ -95,7 +96,8 @@
 
             <!-- Second input field  -->
             <label class="input validator">
-              <input id="input2"
+              <input
+                id="input2"
                 type="number"
                 required
                 placeholder="Enter Login Code(12345)"
@@ -105,7 +107,9 @@
             </label>
           </div>
           <div class="pt-6">
-            <button id="login-btn" class="btn text-white bg-[#422AD5]">Get Started</button>
+            <button id="login-btn" class="btn text-white bg-[#422AD5]">
+              Get Started
+            </button>
           </div>
         </div>
         <!-- banner right side -->
@@ -146,8 +150,8 @@
       ></section>
 
       <!-- FAQ Section -->
-      <section id="faqSection" class="w-11/12 mx-auto mt-50 hidden">
-        <div class="text-center mb-16">
+      <section id="faqSection" class="w-11/12 mx-auto mt-96 hidden">
+        <div class="text-center mb-12">
           <h1 class="text-3xl font-bold">
             <span class="text-[#00BCFF]">Frequently</span> Asked Questions
           </h1>
@@ -216,7 +220,7 @@
         </div>
         <!-- question-5 -->
         <div
-          class="collapse collapse-plus bg-gray-100 border border-base-300 mb-5 rounded-2xl"
+          class="collapse collapse-plus bg-gray-100 border border-base-300 rounded-2xl"
         >
           <input type="radio" name="my-accordion-3" checked="checked" />
           <div class="collapse-title font-semibold">
@@ -250,7 +254,7 @@
       </section>
     </header>
 
-    <footer class="mt-30 mb-10 border-t-2 border-gray-200">
+    <footer class="mt-20 mb-10 border-t-2 border-gray-200">
       <!-- flex div-->
       <div class="w-11/12 mx-auto flex justify-between items-center mt-12">
         <!-- footer left side -->

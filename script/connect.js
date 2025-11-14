@@ -1,12 +1,13 @@
 //show nav , learn section when correctly login
 function login() {
   document.getElementById("nav").classList.remove("hidden");
-  document.getElementById('learnSection').classList.remove('hidden');
-  document.getElementById('oneLesson').classList.remove('hidden');
+  document.getElementById("learnSection").classList.remove("hidden");
+  document.getElementById("oneLesson").classList.remove("hidden");
+  document.getElementById('faqSection').classList.remove('hidden');
 }
-// Banner hide when login 
-function bannerHide(){
-  document.getElementById('banner').classList.add('hidden');
+// Banner hide when login
+function bannerHide() {
+  document.getElementById("banner").classList.add("hidden");
 }
 function hide() {
   document.getElementById("oneLesson").classList.add("hidden");
@@ -143,24 +144,44 @@ const loadCategoryCard = (id) => {
 
 loadWordMeaning();
 loadButton();
-//Input Field
-document.getElementById("login-btn").addEventListener("click", function (event) {
-  event.preventDefault();
-  const input1 = document.getElementById("input1").value;
-  const input2 = document.getElementById("input2").value;
-  const convertedPin = parseInt(input2);
-  if (input1.length > 0) {
-    if (input2.length > 0) {
-      if (convertedPin === 12345) {
-        login();
-        bannerHide();
+
+//Input Field for login
+document
+  .getElementById("login-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const input1 = document.getElementById("input1").value;
+    const input2 = document.getElementById("input2").value;
+    const convertedPin = parseInt(input2);
+    if (input1.length > 0) {
+      if (input2.length > 0) {
+        if (convertedPin === 12345) {
+          login();
+          bannerHide();
+        } else {
+          alert("Incorrect PIN. Please try again.");
+        }
       } else {
-        alert("Incorrect PIN. Please try again.");
+        alert("Please Enter Your PIN");
       }
     } else {
-      alert("Please Enter Your PIN");
+      alert("Please Enter Your Name");
     }
-  } else {
-    alert("Please Enter Your Name");
-  }
-});
+  });
+
+// FAQ Section when click faq button
+function FAQ() {
+  //first remove hidden class from faq section
+  const faqSection = document.getElementById("faqSection");
+  faqSection.classList.remove("hidden");
+
+  // scroll smooth
+  faqSection.scrollIntoView({ behavior: "smooth" });
+}
+
+//Learn Section when click learn button
+function Learn() {
+  const learnSection = document.getElementById("learnSection");
+  learnSection.classList.remove("hidden");
+  learnSection.scrollIntoView({ behavior: "smooth" });
+}
