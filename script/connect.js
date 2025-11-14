@@ -1,6 +1,6 @@
 function hide() {
   document.getElementById("oneLesson").classList.add("hidden");
-  document.getElementById('wordMeaning').classList.remove('hidden');
+  document.getElementById("wordMeaning").classList.remove("hidden");
 }
 
 function removeActiveClass() {
@@ -133,3 +133,21 @@ const loadCategoryCard = (id) => {
 
 loadWordMeaning();
 loadButton();
+//Input Field
+document.getElementById("login-btn").addEventListener("click", function () {
+  const input1 = document.getElementById("input1").value;
+  const input2 = document.getElementById("input2").value;
+  const convertedPin = parseInt(input2);
+  if (input1.length > 0) {
+    if (input2.length > 0) {
+      if (convertedPin === 12345) {
+      } else {
+        alert("Incorrect PIN. Please try again.");
+      }
+    } else {
+      alert("Please Enter Your PIN");
+    }
+  } else {
+    alert("Please Enter Your Name");
+  }
+});

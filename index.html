@@ -84,7 +84,7 @@
           <div class="flex flex-col gap-4">
             <!-- First input field -->
             <label class="input validator mt-6 mb-1">
-              <input
+              <input id="input1"
                 type="text"
                 required
                 placeholder="Enter Your Name"
@@ -95,8 +95,8 @@
 
             <!-- Second input field  -->
             <label class="input validator">
-              <input
-                type="text"
+              <input id="input2"
+                type="number"
                 required
                 placeholder="Enter Login Code(12345)"
                 minlength="3"
@@ -105,7 +105,7 @@
             </label>
           </div>
           <div class="pt-6">
-            <button class="btn text-white bg-[#422AD5]">Get Started</button>
+            <button id="login-btn" class="btn text-white bg-[#422AD5]">Get Started</button>
           </div>
         </div>
         <!-- banner right side -->
@@ -115,7 +115,7 @@
       </section>
 
       <!-- Learn Section -->
-      <section id="learnSection" class="w-11/12 mx-auto mt-40">
+      <section id="learnSection" class="w-11/12 mx-auto mt-40 ">
         <div class="text-center">
           <h1 class="text-xl font-bold">
             <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
@@ -230,7 +230,7 @@
           </div>
         </div>
       </section>
-      
+
       <!-- Modal for word details -->
       <section>
         <!-- Open the modal using ID.showModal() method -->
@@ -248,7 +248,6 @@
           </div>
         </dialog>
       </section>
-     
     </header>
 
     <footer class="mt-30 mb-10 border-t-2 border-gray-200">
