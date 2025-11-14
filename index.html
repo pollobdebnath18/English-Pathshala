@@ -29,7 +29,7 @@
   <body>
     <header>
       <!-- navbar section -->
-      <nav class="">
+      <nav id="nav" class="hidden">
         <div class="navbar bg-gray-100 shadow-sm">
           <div class="navbar-start">
             <p class="text-xl pl-5">
@@ -67,7 +67,7 @@
         </div>
       </nav>
       <!-- banner section -->
-      <section
+      <section id="banner"
         class="w-11/12 mx-auto flex justify-between gap-60 items-center mt-16"
       >
         <!-- banner left site -->
@@ -115,7 +115,7 @@
       </section>
 
       <!-- Learn Section -->
-      <section id="learnSection" class="w-11/12 mx-auto mt-40 ">
+      <section id="learnSection" class="w-11/12 mx-auto mt-40 hidden">
         <div class="text-center">
           <h1 class="text-xl font-bold">
             <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
@@ -126,7 +126,7 @@
           class="text-center pt-8 flex gap-2 justify-center items-center"
         ></div>
         <!-- Show section for select card -->
-        <section id="oneLesson">
+        <section id="oneLesson" class="hidden">
           <div class="mt-12 bg-gray-100 p-12 text-center">
             <p>আপনি এখনো কোনো Lesson Select করেন নি</p>
             <h1 class="text-4xl pt-3 rounded-xl">একটি Lesson Select করুন।</h1>
@@ -146,7 +146,7 @@
       ></section>
 
       <!-- FAQ Section -->
-      <section id="faqSection" class="w-11/12 mx-auto mt-50">
+      <section id="faqSection" class="w-11/12 mx-auto mt-50 hidden">
         <div class="text-center mb-16">
           <h1 class="text-3xl font-bold">
             <span class="text-[#00BCFF]">Frequently</span> Asked Questions

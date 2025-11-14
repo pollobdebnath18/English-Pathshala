@@ -1,3 +1,13 @@
+//show nav , learn section when correctly login
+function login() {
+  document.getElementById("nav").classList.remove("hidden");
+  document.getElementById('learnSection').classList.remove('hidden');
+  document.getElementById('oneLesson').classList.remove('hidden');
+}
+// Banner hide when login 
+function bannerHide(){
+  document.getElementById('banner').classList.add('hidden');
+}
 function hide() {
   document.getElementById("oneLesson").classList.add("hidden");
   document.getElementById("wordMeaning").classList.remove("hidden");
@@ -134,13 +144,16 @@ const loadCategoryCard = (id) => {
 loadWordMeaning();
 loadButton();
 //Input Field
-document.getElementById("login-btn").addEventListener("click", function () {
+document.getElementById("login-btn").addEventListener("click", function (event) {
+  event.preventDefault();
   const input1 = document.getElementById("input1").value;
   const input2 = document.getElementById("input2").value;
   const convertedPin = parseInt(input2);
   if (input1.length > 0) {
     if (input2.length > 0) {
       if (convertedPin === 12345) {
+        login();
+        bannerHide();
       } else {
         alert("Incorrect PIN. Please try again.");
       }
