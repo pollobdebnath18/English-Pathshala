@@ -1,3 +1,8 @@
+function hide() {
+  document.getElementById("oneLesson").classList.add("hidden");
+  document.getElementById('wordMeaning').classList.remove('hidden');
+}
+
 function removeActiveClass() {
   const activeButtons = document.getElementsByClassName("active");
   for (let btn of activeButtons) {
@@ -20,6 +25,28 @@ const loadWordDetails = (id) => {
     .then((res) => res.json())
     .then((data) => displayWordDetails(data.data));
 };
+
+//Load ---> Word Meaning (click the Lesson)
+const loadWordMeaning = () => {
+  const url = `https://openapi.programming-hero.com/api/level/5`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => displayWordMeaning(data.data));
+};
+
+function displayButton(button) {
+  // console.log(button);
+  const lessonButtonContainer = document.getElementById("lesson-btn");
+  for (let btn of button) {
+    // console.log(btn)
+    const btnDiv = document.createElement("div");
+    btnDiv.innerHTML = `
+     <button id="btn-${btn.level_no}" onclick="loadCategoryCard(${btn.level_no})" class="btn text-[#422AD5] border-[#422AD5]  "><i class="fa-solid fa-book-open-reader "></i> Lesson-${btn.level_no}</button>
+     
+    `;
+    lessonButtonContainer.appendChild(btnDiv);
+  }
+}
 
 const displayWordDetails = (details) => {
   console.log(details);
@@ -44,27 +71,7 @@ const displayWordDetails = (details) => {
       </div>
   `;
 };
-function displayButton(button) {
-  // console.log(button);
-  const lessonButtonContainer = document.getElementById("lesson-btn");
-  for (let btn of button) {
-    // console.log(btn)
-    const btnDiv = document.createElement("div");
-    btnDiv.innerHTML = `
-     <button id="btn-${btn.level_no}" onclick="loadCategoryCard(${btn.level_no})" class="btn text-[#422AD5] border-[#422AD5]  "><i class="fa-solid fa-book-open-reader "></i> Lesson-${btn.level_no}</button>
-     
-    `;
-    lessonButtonContainer.appendChild(btnDiv);
-  }
-}
 
-//Load ---> Word Meaning (click the Lesson)
-const loadWordMeaning = () => {
-  const url = `https://openapi.programming-hero.com/api/level/5`;
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => displayWordMeaning(data.data));
-};
 function displayWordMeaning(words) {
   const wordMeaning = document.getElementById("wordMeaning");
   const noCard = document.getElementById("no-card");
@@ -72,10 +79,14 @@ function displayWordMeaning(words) {
   noCard.innerHTML = "";
 
   if (words.length == 0) {
+    hide();
     noCard.innerHTML = `
      <div class="mt-12 bg-gray-100 p-12 text-center">
-          <p>আপনি এখনো কোনো Lesson Select করেন নি</p>
-          <h1 class="text-4xl pt-3 rounded-xl">একটি Lesson Select করুন।</h1>
+          <div class="flex justify-center ">
+           <img src="assets/alert-error.png" alt="">
+          </div>
+          <p>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+          <h1 class="text-4xl pt-3 rounded-xl">নেক্সট Lesson এ যান</h1>
         </div>
     `;
     return;
@@ -96,7 +107,7 @@ function displayWordMeaning(words) {
             </div>
           </div>
         </div>
-
+   
 
 
     `;
@@ -112,7 +123,10 @@ const loadCategoryCard = (id) => {
     .then((data) => {
       const clickedButton = document.getElementById(`btn-${id}`);
       removeActiveClass();
+
       clickedButton.classList.add("active");
+      hide();
+
       displayWordMeaning(data.data);
     });
 };

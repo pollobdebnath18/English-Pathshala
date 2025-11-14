@@ -42,12 +42,14 @@
           </div>
           <div class="navbar-end flex gap-3 pl-5">
             <button
+              onclick="showFAQ()"
               class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
             >
               <span class="text-lg">?</span>FAQ
             </button>
             <button
-              id="learn"
+              onclick="showLearn()"
+              ;
               class="btn text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
             >
               <span class="text-lg"
@@ -113,7 +115,7 @@
       </section>
 
       <!-- Learn Section -->
-      <section class="w-11/12 mx-auto mt-40">
+      <section id="learnSection" class="w-11/12 mx-auto mt-40">
         <div class="text-center">
           <h1 class="text-xl font-bold">
             <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
@@ -123,21 +125,28 @@
           id="lesson-btn"
           class="text-center pt-8 flex gap-2 justify-center items-center"
         ></div>
+        <!-- Show section for select card -->
+        <section id="oneLesson">
+          <div class="mt-12 bg-gray-100 p-12 text-center">
+            <p>আপনি এখনো কোনো Lesson Select করেন নি</p>
+            <h1 class="text-4xl pt-3 rounded-xl">একটি Lesson Select করুন।</h1>
+          </div>
+        </section>
       </section>
       <!-- button 4 and 7 no card  -->
+
+      <!-- Word Meaning Section  -->
+      <section
+        id="wordMeaning"
+        class="w-11/12 mx-auto grid grid-cols-3 gap-4 object-cover mt-30 mb-30 bg-gray-200 p-10 rounded-xl hidden"
+      ></section>
       <section
         id="no-card"
         class="w-11/12 mx-auto mt-30 mb-20 text-center"
       ></section>
 
-      <!-- Word Meaning Section  -->
-      <section
-        id="wordMeaning"
-        class="w-11/12 mx-auto grid grid-cols-3 gap-4 object-cover mt-30 mb-30 bg-gray-200 p-10 rounded-xl"
-      ></section>
-
       <!-- FAQ Section -->
-      <section class="w-11/12 mx-auto mt-50">
+      <section id="faqSection" class="w-11/12 mx-auto mt-50">
         <div class="text-center mb-16">
           <h1 class="text-3xl font-bold">
             <span class="text-[#00BCFF]">Frequently</span> Asked Questions
@@ -221,7 +230,7 @@
           </div>
         </div>
       </section>
-
+      
       <!-- Modal for word details -->
       <section>
         <!-- Open the modal using ID.showModal() method -->
@@ -239,6 +248,7 @@
           </div>
         </dialog>
       </section>
+     
     </header>
 
     <footer class="mt-30 mb-10 border-t-2 border-gray-200">
