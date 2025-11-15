@@ -3,7 +3,7 @@ function login() {
   document.getElementById("nav").classList.remove("hidden");
   document.getElementById("learnSection").classList.remove("hidden");
   document.getElementById("oneLesson").classList.remove("hidden");
-  document.getElementById('faqSection').classList.remove('hidden');
+  document.getElementById("faqSection").classList.remove("hidden");
 }
 // Banner hide when login
 function bannerHide() {
@@ -149,7 +149,7 @@ loadButton();
 document
   .getElementById("login-btn")
   .addEventListener("click", function (event) {
-    event.preventDefault();
+    // event.preventDefault();
     const input1 = document.getElementById("input1").value;
     const input2 = document.getElementById("input2").value;
     const convertedPin = parseInt(input2);
@@ -184,4 +184,12 @@ function Learn() {
   const learnSection = document.getElementById("learnSection");
   learnSection.classList.remove("hidden");
   learnSection.scrollIntoView({ behavior: "smooth" });
+}
+
+//Logout
+function logOut() {
+  document.getElementById("faqSection").classList.add("hidden");
+  document.getElementById("learnSection").classList.add("hidden");
+  document.getElementById("nav").classList.add("hidden");
+  document.getElementById("banner").classList.remove("hidden");
 }
